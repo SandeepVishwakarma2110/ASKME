@@ -21,7 +21,7 @@ function Home({ isLoggedIn }) {
       return;
     }
 
-    fetch('http://localhost:5000/api/verify', {
+    fetch('api/verify', {
       method: 'GET',
       headers: {
         Authorization: `Bearer ${token}`
@@ -63,7 +63,7 @@ function Home({ isLoggedIn }) {
     formData.append('document', uploadedFile);
 
     try {
-      const response = await fetch('http://localhost:5000/api/upload', {
+      const response = await fetch('/api/upload', {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${token}`,
@@ -109,7 +109,7 @@ function Home({ isLoggedIn }) {
     setInputMessage('');
 
     try {
-      const res = await fetch('http://localhost:5000/api/bot-reply', {
+      const res = await fetch('/bot-reply', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

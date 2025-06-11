@@ -13,7 +13,7 @@ const Login = ({ setIsLoggedIn }) => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/login', form);
+      const res = await axios.post('/login', form);
       localStorage.setItem('token', res.data.token);
       //console.log("JWT_SECRET:", process.env.JWT_SECRET);
       alert('Logged in successfully!');

@@ -15,7 +15,7 @@ const Register = () => {
     if (form.password !== form.confirmPassword) return alert('Passwords do not match');
 
     try {
-      await axios.post('http://localhost:5000/register', form);
+      await axios.post('/register', form);
       alert('Registered successfully!');
       navigate('/login');
     } catch (error) {

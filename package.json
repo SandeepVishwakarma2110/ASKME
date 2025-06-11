@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "start": "node server.js",
+    "build": "npm run build --prefix client",
     "client": "npm start --prefix client",
     "server": "node server.js",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "start:prod": "npm install --prefix client && npm run build --prefix client && node server.js"
   },
   "dependencies": {
     "concurrently": "^8.2.2",
