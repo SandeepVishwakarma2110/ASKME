@@ -220,12 +220,7 @@ const createApp = () => {
     res.json({ reply });
   });
 
-  // ✅ Serve React static files *AFTER* all APIs
-  app.use(express.static(path.join(__dirname, '..', 'client', 'build')));
-
-   app.get('/{*any}', (req, res) => {
-    res.sendFile(path.join(__dirname, '..', 'client', 'build', 'index.html'));
-  });
+  
 
 
   return app;
