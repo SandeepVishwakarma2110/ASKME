@@ -11,10 +11,9 @@ app.listen(PORT, () => {
   // ✅ Serve React static files *AFTER* all APIs
   app.use(express.static(path.join(__dirname, 'client', 'build')));
 
-   app.get('/{*any}', (req, res) => {
-    res.sendFile(path.join(__dirname,  'client', 'build', 'index.html'));
+  app.get('/{*any}', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
   });
-
   
 });
 
