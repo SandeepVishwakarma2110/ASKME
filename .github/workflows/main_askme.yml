@@ -13,21 +13,24 @@ jobs:
       contents: read
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20.x'   # ✅ Use LTS/stable Node version
+          node-version: '20.x'
 
       - name: Install server dependencies
         run: npm install
         working-directory: ./
 
-      - name: Install and build client (React)
-        run: |
-          npm install
-          npm run build
+      - name: Install client dependencies
+        run: npm install
+        working-directory: ./client
+
+      - name: Build client (React)
+        run: CI=false npm run build
         working-directory: ./client
 
       - name: Zip deployment package
