@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node server.js",
-    "postinstall": "npm install --prefix client",
+    "postinstall": "npm install dotenv",
     "build": "npm run build --prefix client",
     "client": "npm start --prefix client",
     "server": "node server.js",
