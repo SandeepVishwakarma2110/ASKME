@@ -1,6 +1,6 @@
 const { BlobServiceClient } = require('@azure/storage-blob');
-if (process.env.NODE_ENV !== 'production') {
-  require('dotenv').config();}
+// if (process.env.NODE_ENV !== 'production') {
+//   require('dotenv').config();}
 
 const containerName = process.env.AZURE_STORAGE_CONTAINER_NAME;
 const blobServiceClient = BlobServiceClient.fromConnectionString(process.env.AZURE_STORAGE_CONNECTION_STRING);
