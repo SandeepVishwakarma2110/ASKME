@@ -65,5 +65,5 @@ jobs:
         with:
           app-name: 'askme'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_B5D709550B8B4B0194FD26527FD62123 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1F9797F7D3664FC59449DB702C9416F2 }}
           package: .
